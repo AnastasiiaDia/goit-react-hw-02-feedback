@@ -1,14 +1,15 @@
 import React from 'react';
+import { Button, Ul } from './FeedbackOptions.styled';
 export const FeedBackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <ul>
+    <Ul>
       {Object.keys(options).map((el, idx) => {
         return (
-          <button key={idx} onClick={() => onLeaveFeedback(el)}>
+          <Button key={idx} onClick={() => onLeaveFeedback(el)}>
             {el}
-          </button>
+          </Button>
         );
       })}
-    </ul>
+    </Ul>
   );
 };

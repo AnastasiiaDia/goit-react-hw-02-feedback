@@ -3,6 +3,7 @@ import { Notification } from 'components/Notification/Notification';
 import { Section } from 'components/Section/Section';
 import { Statistics } from 'components/Statistics/Statistics';
 import React, { Component } from 'react';
+import { Container } from './Feedback.styled';
 export default class Feedback extends Component {
   state = {
     good: 0,
@@ -29,7 +30,7 @@ export default class Feedback extends Component {
   render() {
     const totalFeedback = this.onTotalFeedback();
     return (
-      <>
+      <Container>
         <Section title={`Please leave feedback`}>
           <FeedBackOptions
             options={this.state}
@@ -47,7 +48,7 @@ export default class Feedback extends Component {
             />
           </Section>
         )}
-      </>
+      </Container>
     );
   }
 }
